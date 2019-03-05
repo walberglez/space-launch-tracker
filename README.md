@@ -1,5 +1,15 @@
 # SpaceLaunchTracker
 
+## Initial Scope
+
+This app displays information about Space Launches and Space Exploration. It gets the data from the Launch Library API (https://launchlibrary.net/)
+
+### Functionalities
+
+1. Display future Rocket Launches
+
+## Development
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
 
 ## Development server
