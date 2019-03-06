@@ -1,4 +1,4 @@
-# SpaceLaunchTracker
+# Space Launch Tracker
 
 ## Initial Scope
 
