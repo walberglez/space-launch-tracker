@@ -4,9 +4,10 @@
 
 This app displays information about Space Launches and Space Exploration. It gets the data from the Launch Library API (https://launchlibrary.net/)
 
-### Functionalities
+### User Requirements (MVP)
 
-1. Display future Rocket Launches
+1. User Registration / Authentication
+2. Display future Rocket Launches
 
 ## Development
 
