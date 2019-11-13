@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LaunchComponent } from './launch/launch.component';
+import { LaunchScheduleComponent } from './launch-schedule/launch-schedule.component';
 
 const routes: Routes = [
-  { path: '**', component: LaunchComponent }
+  { path: '**', component: LaunchScheduleComponent }
 ];
 
 @NgModule({
