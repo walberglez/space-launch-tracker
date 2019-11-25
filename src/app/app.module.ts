@@ -10,13 +10,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LaunchScheduleComponent } from './launch-schedule/launch-schedule.component';
+import { LaunchComponent } from './launch/launch.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    LaunchScheduleComponent
+    LaunchScheduleComponent,
+    LaunchComponent
   ],
   imports: [
     BrowserModule,

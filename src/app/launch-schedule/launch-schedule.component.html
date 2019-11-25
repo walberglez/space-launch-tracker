@@ -1,5 +1,8 @@
-<ul>
-  <li *ngFor="let launch of launches">
-    {{ launch.name }}
-  </li>
-</ul>
+<div style="padding-left: 10px; padding-right: 10px;">
+  <h3>Launch Schedule</h3>
+  <mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let launch of launches">
+      <app-launch [launch]="launch" style="width: 100%;"></app-launch>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
