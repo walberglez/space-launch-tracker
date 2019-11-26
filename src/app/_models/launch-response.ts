@@ -1,6 +1,6 @@
 import { Launch } from './launch';
 
-export interface LaunchResponse {
+export class LaunchResponse {
     total: number;
     count: number;
     offset: number;
