@@ -1,13 +1,11 @@
-<main class="container-fluid">
+<main class="container">
   <h3>Launch Schedule</h3>
-  <div class="row">
-    <div *ngFor="let launch of launches; let i = index">
-      <div class="col-md-4 col-xs-12">
-        <div class="launch-icon">
-          <img [src]="launch.rocket.imageURL" class="img-fluid rounded">
-        </div>
-        <h5>{{ launch.name }}</h5>
+  <div class="list-group">
+    <a class="card list-group-item list-group-item-action" *ngFor="let launch of launches" style="margin-bottom: 10px; padding: 0!important;">
+      <div class="launch-icon">
+        <img [src]="launch.rocket.imageURL" class="img-fluid">
       </div>
-    </div>
+      <h6>{{ launch.name }}</h6>
+    </a>
   </div>
 </main>

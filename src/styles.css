@@ -1,4 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-main.container-fluid {
+main.container-fluid, main.container {
     padding: 80px 15px 50px;
 }
