@@ -4,7 +4,7 @@ import { LaunchScheduleComponent } from './launch-schedule/launch-schedule.compo
 
 const routes: Routes = [
   { path: 'launch-schedule', component: LaunchScheduleComponent },
-  { path: '', redirectTo: '/launch-schedule', pathMatch: 'full'}
+  { path: '', redirectTo: 'launch-schedule', pathMatch: 'full'}
 ];
 
 @NgModule({
