@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  launchLibraryApiUrl: 'https://ll.thespacedevs.com'
+  launchLibraryApiUrl: 'https://lldev.thespacedevs.com/2.2.0'
 };
