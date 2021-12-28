@@ -1,21 +1,48 @@
 <h3>Launch Schedule</h3>
-<div class="card infinite-item" style="margin-bottom:1em;" *ngFor="let launch of launches">
-    <div class="row no-gutters">
-        <div class="col-md-4">
-            <div class="d-md-block" style="height:100%;width:100%;">
-                <div class="d-none d-md-block"
+<div class="card border border-dark" *ngFor="let launch of launches" style="margin-bottom: 1rem;">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="d-sm-block" style="height:100%;width:100%;">
+                <div class="d-none d-sm-block rounded"
                     style="height:100%;width:100%;background-size: cover;background-position: center;"
                     [style.background-image]="'url(' + launch.image + ')'">
                 </div>
-                <div class="d-md-none text-center" style="overflow: hidden;">
-                    <img [src]="launch.image" class="rounded" style="width: 100%;">
+                <div class="d-sm-none" style="overflow: hidden;">
+                    <img [src]="launch.image" class="img-fluid rounded">
                 </div>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-sm-8">
             <div class="card-body">
-                <div class="d-flex">
-                    <h3 class="card-title text-center">{{ launch.name }}</h3>
+                <h3 class="card-title text-center">{{ launch.name }}</h3>
+                <div class="d-flex flex-wrap">
+                    <dl class="flex-grow-1 mb-0">
+                        <dt>
+                            Liftoff currently scheduled for:
+                        </dt>
+                        <dd>
+                            {{ launch.net | date: 'long' }}
+                        </dd>
+                    </dl>
+                    <dl class="mb-0">
+                        <dt>
+                            Status:
+                        </dt>
+                        <dd>
+                            {{ launch.status!.name || 'Unknown' }}
+                        </dd>
+                    </dl>
+                </div>
+                <div class="d-flex flex-wrap" *ngIf="launch.pad">
+                    <dl class="flex-grow-1 mb-0">
+                        <dt>
+                            Launch Site:
+                        </dt>
+                        <dd>
+                            {{ launch.pad!.name }}<br>
+                            {{ launch.pad!.location!.name }}
+                        </dd>
+                    </dl>
                 </div>
             </div>
         </div>

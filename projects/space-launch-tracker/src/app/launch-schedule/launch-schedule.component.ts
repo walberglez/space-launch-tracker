@@ -7,7 +7,7 @@ import { InlineResponse20022, LaunchSerializerCommon, LaunchService } from 'laun
   styleUrls: ['./launch-schedule.component.css']
 })
 export class LaunchScheduleComponent implements OnInit {
-  launches: LaunchSerializerCommon[] | undefined;
+  launches: LaunchSerializerCommon[] | null = null;
 
   constructor(private launchService: LaunchService) { }
 
@@ -31,7 +31,7 @@ export class LaunchScheduleComponent implements OnInit {
      undefined,
      undefined,
      undefined,
-     15,
+     10,
      undefined,
      undefined,
      undefined,
@@ -43,13 +43,13 @@ export class LaunchScheduleComponent implements OnInit {
      undefined,
      undefined,
      false,
-     false,
+     true,
      undefined,
      false
      )
      .subscribe((data: InlineResponse20022) => {
-      this.launches = data.results;
-    });
+       this.launches = data.results;
+     });
   }
 
 }
