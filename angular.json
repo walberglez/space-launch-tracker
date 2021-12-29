@@ -118,6 +118,14 @@
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
+          "configurations": {
+            "production": {
+              "sourceMap": false,
+              "codeCoverage": true,
+              "browsers": "ChromeHeadlessCI",
+              "watch": false
+            }
+          },
           "options": {
             "main": "projects/space-launch-tracker/src/test.ts",
             "polyfills": "projects/space-launch-tracker/src/polyfills.ts",
