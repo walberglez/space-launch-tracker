@@ -9,15 +9,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
-      
+
       - name: Setup
-        if:
-          steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Build
-        run: npm run build
-      
       - name: Test
         run: |
-          npm test -- --no-progress
+          npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
