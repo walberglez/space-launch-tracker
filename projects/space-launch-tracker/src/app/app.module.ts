@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LaunchScheduleComponent } from './launch-schedule/launch-schedule.component';
 import { ApiModule, Configuration } from 'launch-library-client';
 import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    FormsModule,
     ApiModule.forRoot(() => new Configuration({
       basePath: environment.launchLibraryApiUrl
     }))
