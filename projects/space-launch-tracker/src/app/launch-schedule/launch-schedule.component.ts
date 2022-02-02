@@ -42,21 +42,7 @@ export class LaunchScheduleComponent {
     ).pipe(
       map(data => data.results),
       tap(results => {
-        results.sort((a: Location, b: Location) => {
-          // if (a.name == null && b.name == null) {
-          //   return 0;
-          // }
-
-          // if (a.name == null) {
-          //   return 1;
-          // }
-
-          // if (b.name == null) {
-          //   return -1;
-          // }
-        
-          return a.name!.localeCompare(b.name!);
-        })
+        results.sort((a: Location, b: Location) => a.name!.localeCompare(b.name!))
       })
     );
   }
